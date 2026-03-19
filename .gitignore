@@ -1,0 +1,31 @@
+# env
+.env
+.env.*
+!.env.example
+
+# dependencies
+node_modules/
+
+# next
+.next/
+out/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# macOS
+.DS_Store
+
+# secrets
+*.pem
+*.key
+*.p12
+*.crt
+*.cer
+
+# misc
+coverage/
+dist/
