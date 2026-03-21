@@ -17,7 +17,7 @@ const rooms = [
     descKey: "room01Desc",
     bedKey: "room01Bed",
     capacity: 2,
-    imgSrc: "/img/rooms/room-01.jpg",
+    imgSrc: "/img/rooms/room-01.jpeg",
     amenityKeys: [
       "amenityWifi",
       "amenityAc",
@@ -32,7 +32,7 @@ const rooms = [
     descKey: "room02Desc",
     bedKey: "room02Bed",
     capacity: 4,
-    imgSrc: "/img/rooms/room-02.jpg",
+    imgSrc: "/img/rooms/room-02.jpeg",
     amenityKeys: [
       "amenityWifi",
       "amenityAc",
@@ -47,7 +47,7 @@ const rooms = [
     descKey: "room03Desc",
     bedKey: "room03Bed",
     capacity: 4,
-    imgSrc: "/img/rooms/room-03.jpg",
+    imgSrc: "/img/rooms/room-03.jpeg",
     amenityKeys: [
       "amenityWifi",
       "amenityAc",

@@ -31,7 +31,7 @@ export default function StaySection() {
           <div className="grid gap-3">
             <div className="relative w-full h-72 rounded-2xl shadow-soft overflow-hidden">
               <ImageWithFallback
-                src="/img/guest-room.jpg"
+                src="/img/guest-room.jpeg"
                 alt="客室"
                 fallbackText="客室"
               />
@@ -39,14 +39,14 @@ export default function StaySection() {
             <div className="grid grid-cols-2 gap-3">
               <div className="relative h-48 w-full rounded-2xl shadow-soft overflow-hidden">
                 <ImageWithFallback
-                  src="/img/lounge.jpg"
+                  src="/img/lounge.jpeg"
                   alt="ラウンジ"
                   fallbackText="ラウンジ"
                 />
               </div>
               <div className="relative h-48 w-full rounded-2xl shadow-soft overflow-hidden">
                 <ImageWithFallback
-                  src="/img/garden.jpg"
+                  src="/img/garden.jpeg"
                   alt="庭"
                   fallbackText="中庭"
                 />

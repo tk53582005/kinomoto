@@ -24,7 +24,7 @@ export default function HeroSection() {
           <h1 className="serif text-3xl md:text-5xl font-semibold leading-tight">
             {t("title")}
           </h1>
-          <p className="max-w-2xl mt-3 md:mt-4 text-neutral-200">
+          <p className="mt-3 md:mt-4 text-neutral-200">
             {t("lead")}
           </p>
           <div className="mt-6 flex flex-wrap gap-3">

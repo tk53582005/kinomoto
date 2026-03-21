@@ -31,7 +31,7 @@ export default function ReservationPage() {
               <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" className="btn border border-neutral-300 text-sm hover:bg-neutral-50 flex items-center gap-2">
                 <span>🏨</span> {t("bookingCom")}
               </a>
-              <a href="https://www.airbnb.com" target="_blank" rel="noopener noreferrer" className="btn border border-neutral-300 text-sm hover:bg-neutral-50 flex items-center gap-2">
+              <a href="https://www.airbnb.jp/rooms/1637509784382653021" target="_blank" rel="noopener noreferrer" className="btn border border-neutral-300 text-sm hover:bg-neutral-50 flex items-center gap-2">
                 <span>🏠</span> {t("airbnb")}
               </a>
             </div>

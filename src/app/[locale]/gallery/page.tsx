@@ -1,58 +1,37 @@
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import MasonryGallery from "@/components/MasonryGallery";
+import ImageSlider from "@/components/ImageSlider";
 import type { GalleryImage } from "@/components/Lightbox";
 
+export const metadata: Metadata = {
+  title: "フォトギャラリー | 中屋旅館",
+  description: "中屋旅館のフォトギャラリー。空き家だった頃、工事中、完成後の3つの時期をご覧いただけます。",
+};
+
 const vacantImages: GalleryImage[] = [
-  {
-    src: "/img/gallery/vacant-01.jpg",
-    altJa: "外観（空き家時代）",
-    altEn: "Exterior (vacant period)",
-    captionJa: "外観（空き家時代）",
-    captionEn: "Exterior (vacant period)",
-  },
-  {
-    src: "/img/gallery/vacant-02.jpg",
-    altJa: "室内（空き家時代）",
-    altEn: "Interior (vacant period)",
-    captionJa: "室内（空き家時代）",
-    captionEn: "Interior (vacant period)",
-  },
+  { src: "/img/gallery/vacant-01.jpg", altJa: "空き家時代 01", altEn: "Vacant 01", captionJa: "", captionEn: "" },
+  { src: "/img/gallery/vacant-02.jpg", altJa: "空き家時代 02", altEn: "Vacant 02", captionJa: "", captionEn: "" },
+  { src: "/img/gallery/vacant-03.jpg", altJa: "空き家時代 03", altEn: "Vacant 03", captionJa: "", captionEn: "" },
+  { src: "/img/gallery/vacant-04.jpg", altJa: "空き家時代 04", altEn: "Vacant 04", captionJa: "", captionEn: "" },
+  { src: "/img/gallery/vacant-05.jpg", altJa: "空き家時代 05", altEn: "Vacant 05", captionJa: "", captionEn: "" },
+  { src: "/img/gallery/vacant-06.jpg", altJa: "空き家時代 06", altEn: "Vacant 06", captionJa: "", captionEn: "" },
 ];
 
 const constructionImages: GalleryImage[] = [
-  {
-    src: "/img/gallery/construction-01.jpg",
-    altJa: "梁の補修",
-    altEn: "Beam repair",
-    captionJa: "梁の補修",
-    captionEn: "Beam repair",
-  },
-  {
-    src: "/img/gallery/construction-02.jpg",
-    altJa: "足場と養生",
-    altEn: "Scaffolding and sheeting",
-    captionJa: "足場と養生",
-    captionEn: "Scaffolding and sheeting",
-  },
+  // 写真が届いたら追加
 ];
 
 const completedImages: GalleryImage[] = [
-  {
-    src: "/img/gallery/completed-01.jpg",
-    altJa: "外観（完成）",
-    altEn: "Exterior (completed)",
-    captionJa: "外観（完成）",
-    captionEn: "Exterior (completed)",
-  },
-  {
-    src: "/img/gallery/completed-02.jpg",
-    altJa: "室内（完成）",
-    altEn: "Interior (completed)",
-    captionJa: "室内（完成）",
-    captionEn: "Interior (completed)",
-  },
+  { src: "/img/gallery/completed-01.jpeg", altJa: "完成後 01", altEn: "Completed 01", captionJa: "", captionEn: "" },
+  { src: "/img/gallery/completed-02.jpeg", altJa: "完成後 02", altEn: "Completed 02", captionJa: "", captionEn: "" },
+  { src: "/img/gallery/completed-03.jpeg", altJa: "完成後 03", altEn: "Completed 03", captionJa: "", captionEn: "" },
+  { src: "/img/gallery/completed-04.jpeg", altJa: "完成後 04", altEn: "Completed 04", captionJa: "", captionEn: "" },
+  { src: "/img/gallery/completed-05.jpeg", altJa: "完成後 05", altEn: "Completed 05", captionJa: "", captionEn: "" },
+  { src: "/img/gallery/completed-06.jpeg", altJa: "完成後 06", altEn: "Completed 06", captionJa: "", captionEn: "" },
+  { src: "/img/gallery/completed-07.jpeg", altJa: "完成後 07", altEn: "Completed 07", captionJa: "", captionEn: "" },
+  { src: "/img/gallery/completed-08.jpeg", altJa: "完成後 08", altEn: "Completed 08", captionJa: "", captionEn: "" },
 ];
 
 export default function GalleryPage() {
@@ -61,63 +40,38 @@ export default function GalleryPage() {
   return (
     <>
       <Header />
-      <main className="py-12 md:py-16">
+      <main className="py-12 md:py-16 bg-neutral-50 min-h-screen">
         <div className="container-w">
           <p className="text-sm tracking-widest text-neutral-500">{t("kicker")}</p>
           <h1 className="serif text-3xl md:text-5xl font-semibold mt-2">
             {t("title")}
           </h1>
           <p className="mt-3 text-neutral-700">{t("lead")}</p>
-
-          {/* Jump pills */}
           <div className="mt-6 flex flex-wrap gap-2">
-            <a href="#vacant" className="badge-pill">
-              {t("pills.vacant")}
-            </a>
-            <a href="#construction" className="badge-pill">
-              {t("pills.construction")}
-            </a>
-            <a href="#completed" className="badge-pill">
-              {t("pills.completed")}
-            </a>
+            <a href="#vacant" className="badge-pill">{t("pills.vacant")}</a>
+            <a href="#construction" className="badge-pill">{t("pills.construction")}</a>
+            <a href="#completed" className="badge-pill">{t("pills.completed")}</a>
           </div>
         </div>
 
-        {/* 空き家だった頃 */}
         <section id="vacant" className="mt-10" style={{ scrollMarginTop: "96px" }}>
           <div className="container-w">
-            <h2 className="serif text-2xl md:text-4xl font-semibold mb-4">
-              {t("vacant.title")}
-            </h2>
-            <MasonryGallery images={vacantImages} group="vacant" />
+            <h2 className="serif text-2xl md:text-4xl font-semibold mb-6">{t("vacant.title")}</h2>
+            <ImageSlider images={vacantImages} group="vacant" />
           </div>
         </section>
 
-        {/* 工事中 */}
-        <section
-          id="construction"
-          className="mt-14"
-          style={{ scrollMarginTop: "96px" }}
-        >
+        <section id="construction" className="mt-14" style={{ scrollMarginTop: "96px" }}>
           <div className="container-w">
-            <h2 className="serif text-2xl md:text-4xl font-semibold mb-4">
-              {t("construction.title")}
-            </h2>
-            <MasonryGallery images={constructionImages} group="construction" />
+            <h2 className="serif text-2xl md:text-4xl font-semibold mb-6">{t("construction.title")}</h2>
+            <ImageSlider images={constructionImages} group="construction" />
           </div>
         </section>
 
-        {/* 完成後 */}
-        <section
-          id="completed"
-          className="mt-14"
-          style={{ scrollMarginTop: "96px" }}
-        >
+        <section id="completed" className="mt-14" style={{ scrollMarginTop: "96px" }}>
           <div className="container-w">
-            <h2 className="serif text-2xl md:text-4xl font-semibold mb-4">
-              {t("completed.title")}
-            </h2>
-            <MasonryGallery images={completedImages} group="completed" />
+            <h2 className="serif text-2xl md:text-4xl font-semibold mb-6">{t("completed.title")}</h2>
+            <ImageSlider images={completedImages} group="completed" />
           </div>
         </section>
       </main>
