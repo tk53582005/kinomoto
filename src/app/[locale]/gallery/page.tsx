@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageSlider from "@/components/ImageSlider";
-import type { GalleryImage } from "@/components/Lightbox";
+import type { GalleryImage } from "@/components/ImageSlider";
 
 export const metadata: Metadata = {
   title: "フォトギャラリー | 中屋旅館",
