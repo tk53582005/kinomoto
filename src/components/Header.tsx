@@ -24,17 +24,15 @@ export default function Header() {
   const isAccess = pathname.includes("/access");
   const isSubPage = isGallery || isRooms || isReservation || isAccess;
 
-  const navLinks = [
-    { href: isSubPage ? `/${locale}/#bar` : "#bar", label: t("bar") },
-    { href: isSubPage ? `/${locale}/#stay` : "#stay", label: t("stay") },
-    { href: `/${locale}/rooms`, label: t("rooms"), bold: isRooms },
-    { href: isSubPage ? `/${locale}/#history` : "#history", label: t("history") },
-    { href: isSubPage ? `/${locale}/#history` : "#history", label: t("concept") },
-    { href: `/${locale}/gallery`, label: t("gallery"), bold: isGallery },
-    { href: `/${locale}/access`, label: t("access"), bold: isAccess },
-    { href: isSubPage ? `/${locale}/#contact` : "#contact", label: t("contact") },
-    { href: `/${locale}/reservation`, label: t("reservation"), bold: isReservation, highlight: true },
-  ];
+const navLinks = [
+  { href: isSubPage ? `/${locale}/#bar` : "#bar", label: t("bar") },
+  { href: isSubPage ? `/${locale}/#stay` : "#stay", label: t("stay") },
+  { href: `/${locale}/rooms`, label: t("rooms"), bold: isRooms },
+  { href: `/${locale}/gallery`, label: t("gallery"), bold: isGallery },
+  { href: `/${locale}/access`, label: t("access"), bold: isAccess },
+  { href: isSubPage ? `/${locale}/#contact` : "#contact", label: t("contact") },
+  { href: `/${locale}/reservation`, label: t("reservation"), bold: isReservation, highlight: true },
+];
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
