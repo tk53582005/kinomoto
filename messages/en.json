@@ -71,12 +71,8 @@
     "publicBody": "Kinomoto is a historic post town in the Kohoku region of northern Shiga Prefecture. Nearby attractions include Shizugatake, Lake Yogo, and Chikubushima Island."
   },
   "cta": {
-    "title": "Get updates",
-    "body": "We'll let you know when room bookings open and when the bar menu is refreshed.",
-    "button": "Subscribe",
-    "placeholder": "Email",
-    "successMsg": "Thanks for subscribing!",
-    "errorMsg": "Please enter a valid email address."
+    "title": "Follow us on social",
+    "body": "Stay up to date on Instagram, Facebook, and LINE."
   },
   "footer": {
     "tagline": "Built with care in Kinomoto"

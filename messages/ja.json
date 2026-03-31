@@ -71,12 +71,8 @@
     "publicBody": "木之本は滋賀県北部、湖北地域に位置する歴史ある宿場町です。賤ヶ岳、余呉湖、竹生島など観光スポットも充実しています。"
   },
   "cta": {
-    "title": "最新情報を受け取る",
-    "body": "宿の予約開始や酒場のメニュー更新など、オープン情報をお届けします。",
-    "button": "登録する",
-    "placeholder": "メールアドレス",
-    "successMsg": "登録ありがとうございます！",
-    "errorMsg": "有効なメールアドレスを入力してください。"
+    "title": "SNSでも発信中",
+    "body": "最新情報はInstagram・Facebook・LINEでお届けしています。フォローしてお待ちください。"
   },
   "footer": {
     "tagline": "Built with care in Kinomoto"

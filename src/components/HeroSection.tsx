@@ -9,7 +9,7 @@ export default function HeroSection() {
 
   return (
     <section id="top" className="relative">
-      <div className="relative" style={{ paddingTop: "48%" }}>
+      <div className="relative" style={{ paddingTop: "42%" }}>
         <Image
           src="/img/hero.jpg"
           alt="木之本の街並み"

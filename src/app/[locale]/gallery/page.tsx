@@ -57,21 +57,27 @@ export default function GalleryPage() {
         <section id="vacant" className="mt-10" style={{ scrollMarginTop: "96px" }}>
           <div className="container-w">
             <h2 className="serif text-2xl md:text-4xl font-semibold mb-6">{t("vacant.title")}</h2>
-            <ImageSlider images={vacantImages} group="vacant" />
+            <div className="max-w-3xl mx-auto">
+              <ImageSlider images={vacantImages} group="vacant" />
+            </div>
           </div>
         </section>
 
         <section id="construction" className="mt-14" style={{ scrollMarginTop: "96px" }}>
           <div className="container-w">
             <h2 className="serif text-2xl md:text-4xl font-semibold mb-6">{t("construction.title")}</h2>
-            <ImageSlider images={constructionImages} group="construction" />
+            <div className="max-w-3xl mx-auto">
+              <ImageSlider images={constructionImages} group="construction" />
+            </div>
           </div>
         </section>
 
         <section id="completed" className="mt-14" style={{ scrollMarginTop: "96px" }}>
           <div className="container-w">
             <h2 className="serif text-2xl md:text-4xl font-semibold mb-6">{t("completed.title")}</h2>
-            <ImageSlider images={completedImages} group="completed" />
+            <div className="max-w-3xl mx-auto">
+              <ImageSlider images={completedImages} group="completed" />
+            </div>
           </div>
         </section>
       </main>
