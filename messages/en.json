@@ -20,10 +20,10 @@
   "bar": {
     "title": "Sake Bar \"Ikuhi\"",
     "body": "A bar where sake takes center stage. Kinomoto is home to two of the oldest breweries in Japan, and sake culture has long flourished here. We feature Japanese sake alongside a range of domestically produced spirits and liqueurs. Dishes are designed to pair with drinks—meat, fish, and vegetables—with a small menu that changes every few days.",
-    "badge1": "Sake-led",
-    "badge1Body": "A broad selection focused on local labels.",
-    "badge2": "Seasonal Menu",
-    "badge2Body": "Little surprises every few days."
+    "badge1": "Sake",
+    "badge1Body": "From chilled to warm, we help you find your perfect pour from local labels.",
+    "badge2": "Food",
+    "badge2Body": "Seasonal local ingredients from Lake Biwa, the mountains, and the fields."
   },
   "stay": {
     "title": "Stay \"Nakaya Ryokan\"",

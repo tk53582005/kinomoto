@@ -13,36 +13,36 @@ export default function BarSection() {
           </h2>
           <p className="text-neutral-700 leading-relaxed">{t("body")}</p>
           <div className="mt-6 grid grid-cols-2 gap-3 text-sm">
-            <div className="card shadow-soft">
-              <p className="font-semibold mb-1">{t("badge1")}</p>
-              <p className="text-neutral-600">{t("badge1Body")}</p>
+            <div className="card shadow-soft p-4 flex flex-col">
+              <p className="font-semibold mb-2">{t("badge1")}</p>
+              <p className="text-neutral-600 leading-relaxed whitespace-pre-line">{t("badge1Body")}</p>
             </div>
-            <div className="card shadow-soft">
-              <p className="font-semibold mb-1">{t("badge2")}</p>
-              <p className="text-neutral-600">{t("badge2Body")}</p>
+            <div className="card shadow-soft p-4 flex flex-col">
+              <p className="font-semibold mb-2">{t("badge2")}</p>
+              <p className="text-neutral-600 leading-relaxed whitespace-pre-line">{t("badge2Body")}</p>
             </div>
           </div>
         </div>
         <div className="order-1 md:order-2 grid gap-3">
           <div className="relative w-full h-72 rounded-2xl shadow-soft overflow-hidden">
             <ImageWithFallback
-              src="/img/sake-bottles.jpg"
-              alt="酒瓶"
-              fallbackText="日本酒コレクション"
+              src="/img/bar-table.jpg"
+              alt="一枚板カウンター"
+              fallbackText="カウンター席"
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div className="relative h-48 w-full rounded-2xl shadow-soft overflow-hidden">
               <ImageWithFallback
-                src="/img/bar-counter.jpg"
-                alt="バーカウンター"
-                fallbackText="カウンター席"
+                src="/img/sake-bottles.jpg"
+                alt="日本酒棚"
+                fallbackText="日本酒コレクション"
               />
             </div>
             <div className="relative h-48 w-full rounded-2xl shadow-soft overflow-hidden">
               <ImageWithFallback
-                src="/img/food-pairing.jpg"
-                alt="料理とお酒のペアリング"
+                src="/img/bar-pairing.jpg"
+                alt="日本酒と器"
                 fallbackText="お料理"
               />
             </div>
