@@ -105,7 +105,7 @@ export default function RoomsPage() {
           <h1 className="serif text-3xl md:text-5xl font-semibold mt-2">
             {t("title")}
           </h1>
-          <p className="mt-3 text-neutral-700 max-w-2xl">{t("lead")}</p>
+          <p className="mt-3 text-neutral-700">{t("lead")}</p>
 
           <div className="mt-6 flex flex-wrap gap-4 text-sm">
             <div className="bg-white rounded-xl px-5 py-3 shadow-soft">
