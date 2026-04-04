@@ -1,6 +1,9 @@
-import { useTranslations } from "next-intl";
+"use client";
+
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
-import ImageWithFallback from "./ImageWithFallback";
+import ImageSlider from "./ImageSlider";
+import type { GalleryImage } from "./ImageSlider";
 
 type Room = {
   id: string;
@@ -8,7 +11,7 @@ type Room = {
   descKey: string;
   bedKey: string;
   capacity: number;
-  imgSrc: string;
+  images: GalleryImage[];
   amenityKeys: string[];
 };
 
@@ -18,30 +21,25 @@ type Props = {
 
 export default function RoomCard({ room }: Props) {
   const t = useTranslations("rooms");
+  const locale = useLocale();
 
   return (
     <article className="bg-white rounded-2xl shadow-soft overflow-hidden">
-      {/* Image */}
-      <div className="relative w-full h-64 md:h-80">
-        <ImageWithFallback
-          src={room.imgSrc}
-          alt={t(room.nameKey as Parameters<typeof t>[0])}
-          fallbackText={t(room.nameKey as Parameters<typeof t>[0])}
-        />
+      <div className="p-4">
+        <div className="max-w-3xl mx-auto">
+          <ImageSlider images={room.images} group={room.id} aspectRatio="16/9" />
+        </div>
       </div>
 
-      {/* Content */}
       <div className="p-6 md:p-8">
         <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
           <div>
             <h2 className="serif text-2xl md:text-3xl font-semibold">
               {t(room.nameKey as Parameters<typeof t>[0])}
             </h2>
-            <p className="text-neutral-500 text-sm mt-1">
+            <p className="text-neutral-700 text-sm mt-1">
               {t(room.bedKey as Parameters<typeof t>[0])} &nbsp;·&nbsp;{" "}
-              {t("capacity")}
-              {room.capacity}
-              {t("capacityUnit")}
+              {t("capacity")} {room.capacity}{t("capacityUnit")}
             </p>
           </div>
           <div className="text-right">
@@ -57,7 +55,6 @@ export default function RoomCard({ room }: Props) {
           {t(room.descKey as Parameters<typeof t>[0])}
         </p>
 
-        {/* Amenities */}
         <div className="mb-6">
           <p className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-2">
             {t("amenities")}
@@ -74,9 +71,8 @@ export default function RoomCard({ room }: Props) {
           </div>
         </div>
 
-        {/* CTA */}
         <Link
-          href="/reservation"
+          href={`/${locale}/reservation`}
           className="btn btn-primary w-full text-center block text-sm font-medium"
         >
           {t("ctaBook")}

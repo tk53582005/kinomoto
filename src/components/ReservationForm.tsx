@@ -167,6 +167,8 @@ export default function ReservationForm() {
           <option value="2">{t("guests2")}</option>
           <option value="3">{t("guests3")}</option>
           <option value="4">{t("guests4")}</option>
+          <option value="5">{t("guests5")}</option>
+          <option value="6">{t("guests6")}</option>
         </select>
       </div>
 

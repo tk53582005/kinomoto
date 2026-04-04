@@ -15,9 +15,10 @@ export type GalleryImage = {
 type Props = {
   images: GalleryImage[];
   group: string;
+  aspectRatio?: string;
 };
 
-export default function ImageSlider({ images, group }: Props) {
+export default function ImageSlider({ images, group, aspectRatio = "4/3" }: Props) {
   const locale = useLocale();
   const [current, setCurrent] = useState(0);
 
@@ -26,7 +27,7 @@ export default function ImageSlider({ images, group }: Props) {
 
   if (images.length === 0) {
     return (
-      <div className="w-full rounded-2xl overflow-hidden bg-neutral-100 flex items-center justify-center text-neutral-400 text-sm" style={{ aspectRatio: "16/9" }}>
+      <div className="w-full rounded-2xl overflow-hidden bg-neutral-100 flex items-center justify-center text-neutral-400 text-sm" style={{ aspectRatio }}>
         {locale === "ja" ? "写真準備中" : "Photos coming soon"}
       </div>
     );
@@ -35,7 +36,7 @@ export default function ImageSlider({ images, group }: Props) {
   const img = images[current];
 
   return (
-    <div className="relative w-full rounded-2xl overflow-hidden shadow-soft" style={{ aspectRatio: "16/9" }} data-group={group}>
+    <div className="relative w-full rounded-2xl overflow-hidden shadow-soft" style={{ aspectRatio }} data-group={group}>
       <div className="relative w-full h-full">
         <Image
           src={img.src}
