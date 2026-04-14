@@ -35,7 +35,7 @@ export default function HeroSection() {
           </p>
           {/* 予約ボタン（PC・スマホ共通） */}
           <div className="mt-4 md:mt-6">
-            <Link href={`/${locale}/reservation`} className="btn bg-white text-neutral-900 text-sm md:text-base px-6">
+            <Link href={`/${locale}/reservation`} className="btn btn-primary text-sm md:text-base px-6">
               {t("ctaReserve")}
             </Link>
           </div>
