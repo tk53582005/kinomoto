@@ -9,6 +9,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .serif {
@@ -186,7 +191,7 @@ html {
   border-radius: 0.6rem;
   font-size: 0.9rem;
   max-width: 92vw;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .img-ph {
@@ -197,4 +202,13 @@ html {
   justify-content: center;
   aspect-ratio: 4/3;
   font-size: 0.9rem;
+}
+
+* {
+  outline: 1px solid red;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
 }

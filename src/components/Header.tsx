@@ -24,24 +24,24 @@ export default function Header() {
   const isAccess = pathname.includes("/access");
   const isSubPage = isGallery || isRooms || isReservation || isAccess;
 
-const navLinks = [
-  { href: isSubPage ? `/${locale}/#bar` : "#bar", label: t("bar") },
-  { href: isSubPage ? `/${locale}/#stay` : "#stay", label: t("stay") },
-  { href: `/${locale}/rooms`, label: t("rooms"), bold: isRooms },
-  { href: `/${locale}/gallery`, label: t("gallery"), bold: isGallery },
-  { href: `/${locale}/access`, label: t("access"), bold: isAccess },
-  { href: isSubPage ? `/${locale}/#contact` : "#contact", label: t("contact") },
-  { href: `/${locale}/reservation`, label: t("reservation"), bold: isReservation, highlight: true },
-];
+  const navLinks = [
+    { href: isSubPage ? `/${locale}/#bar` : "#bar", label: t("bar") },
+    { href: isSubPage ? `/${locale}/#stay` : "#stay", label: t("stay") },
+    { href: `/${locale}/rooms`, label: t("rooms"), bold: isRooms },
+    { href: `/${locale}/gallery`, label: t("gallery"), bold: isGallery },
+    { href: `/${locale}/access`, label: t("access"), bold: isAccess },
+    { href: isSubPage ? `/${locale}/#contact` : "#contact", label: t("contact") },
+    { href: `/${locale}/reservation`, label: t("reservation"), bold: isReservation, highlight: true },
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
-      <div className="container-w flex items-center justify-between py-3">
-        <Link href={`/${locale}`} className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-[#1b4332]" />
-          <div className="leading-tight">
-            <p className="font-semibold">酒茶いくひ / 中屋旅館</p>
-            <p className="text-xs text-neutral-500">Kinomoto Dining &amp; Stay</p>
+      <div className="container-w flex items-center justify-between py-3 gap-2 overflow-hidden">
+        <Link href={`/${locale}`} className="flex items-center gap-2 md:gap-3 min-w-0 shrink">
+          <div className="w-8 h-8 md:w-9 md:h-9 rounded-xl bg-[#1b4332] shrink-0" />
+          <div className="leading-tight min-w-0">
+            <p className="font-semibold text-sm md:text-base truncate">酒茶いくひ / 中屋旅館</p>
+            <p className="text-xs text-neutral-500 hidden md:block">Kinomoto Dining &amp; Stay</p>
           </div>
         </Link>
 
@@ -63,7 +63,7 @@ const navLinks = [
           )}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <button
             id="lang-ja"
             className="btn lang-btn text-sm border border-neutral-300"

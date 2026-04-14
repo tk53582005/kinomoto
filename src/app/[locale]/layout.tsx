@@ -92,7 +92,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           rel="stylesheet"
         />
       </head>
-      <body className="bg-neutral-50 text-neutral-900">
+      <body className="bg-neutral-50 text-neutral-900 overflow-x-hidden">
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
