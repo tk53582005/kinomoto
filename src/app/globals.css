@@ -126,7 +126,6 @@ body {
   cursor: pointer;
 }
 
-/* Lightbox */
 .lb-backdrop {
   position: fixed;
   inset: 0;
@@ -202,13 +201,4 @@ body {
   justify-content: center;
   aspect-ratio: 4/3;
   font-size: 0.9rem;
-}
-
-* {
-  outline: 1px solid red;
-}
-
-* {
-  box-sizing: border-box;
-  max-width: 100%;
 }

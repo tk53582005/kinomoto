@@ -33,18 +33,9 @@ export default function HeroSection() {
           <p className="md:hidden mt-2 text-xs text-neutral-200 w-full leading-relaxed">
             {t("lead")}
           </p>
-          {/* PC版ボタン */}
-          <div className="hidden md:flex mt-6 gap-3">
-            <Link href="#bar" className="btn btn-primary">
-              {t("ctaBar")}
-            </Link>
-            <Link href="#stay" className="btn bg-white text-neutral-900">
-              {t("ctaStay")}
-            </Link>
-          </div>
-          {/* スマホ版ボタン */}
-          <div className="md:hidden mt-4">
-            <Link href={`/${locale}/reservation`} className="btn btn-primary text-sm px-6">
+          {/* 予約ボタン（PC・スマホ共通） */}
+          <div className="mt-4 md:mt-6">
+            <Link href={`/${locale}/reservation`} className="btn bg-white text-neutral-900 text-sm md:text-base px-6">
               {t("ctaReserve")}
             </Link>
           </div>
