@@ -55,7 +55,9 @@ export default function ReservationForm() {
   };
 
   const inputClass =
-    "w-full max-w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1b4332] focus:border-transparent bg-white";
+    "w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1b4332] focus:border-transparent";
+  const dateInputClass =
+    "w-full rounded-xl border border-neutral-300 px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1b4332] focus:border-transparent";
   const labelClass = "block text-sm font-medium text-neutral-700 mb-1";
   const requiredBadge = (
     <span className="ml-1 text-xs text-[#1b4332] font-semibold">
@@ -125,31 +127,30 @@ export default function ReservationForm() {
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-hidden">
-        <div>
-          <label className={labelClass}>
-            {t("checkIn")} {requiredBadge}
-          </label>
-          <input
-            type="date"
-            required
-            value={form.checkIn}
-            onChange={set("checkIn")}
-            className={inputClass}
-          />
-        </div>
-        <div>
-          <label className={labelClass}>
-            {t("checkOut")} {requiredBadge}
-          </label>
-          <input
-            type="date"
-            required
-            value={form.checkOut}
-            onChange={set("checkOut")}
-            className={inputClass}
-          />
-        </div>
+      <div>
+        <label className={labelClass}>
+          {t("checkIn")} {requiredBadge}
+        </label>
+        <input
+          type="date"
+          required
+          value={form.checkIn}
+          onChange={set("checkIn")}
+          className={dateInputClass}
+        />
+      </div>
+
+      <div>
+        <label className={labelClass}>
+          {t("checkOut")} {requiredBadge}
+        </label>
+        <input
+          type="date"
+          required
+          value={form.checkOut}
+          onChange={set("checkOut")}
+          className={dateInputClass}
+        />
       </div>
 
       <div>
