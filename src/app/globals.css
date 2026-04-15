@@ -202,3 +202,9 @@ body {
   aspect-ratio: 4/3;
   font-size: 0.9rem;
 }
+
+input[type="date"] {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
