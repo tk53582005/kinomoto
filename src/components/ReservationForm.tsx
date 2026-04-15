@@ -27,16 +27,11 @@ const initialState: FormState = {
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-const isValidDate = (value: string) => {
-  return /^\d{4}\/\d{2}\/\d{2}$/.test(value);
-};
-
 export default function ReservationForm() {
   const t = useTranslations("reservation");
   const locale = useLocale();
   const [form, setForm] = useState<FormState>(initialState);
   const [status, setStatus] = useState<Status>("idle");
-  const [dateError, setDateError] = useState<string>("");
 
   const set = (field: keyof FormState) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -44,11 +39,6 @@ export default function ReservationForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isValidDate(form.checkIn) || !isValidDate(form.checkOut)) {
-      setDateError(locale === "ja" ? "日付は YYYY/MM/DD の形式で入力してください" : "Please enter dates in YYYY/MM/DD format");
-      return;
-    }
-    setDateError("");
     setStatus("submitting");
     try {
       const res = await fetch("/api/reservation", {
@@ -140,12 +130,10 @@ export default function ReservationForm() {
           {t("checkIn")} {requiredBadge}
         </label>
         <input
-          type="text"
-          inputMode="numeric"
+          type="date"
           required
           value={form.checkIn}
           onChange={set("checkIn")}
-          placeholder="2026/08/01"
           className={inputClass}
         />
       </div>
@@ -155,19 +143,13 @@ export default function ReservationForm() {
           {t("checkOut")} {requiredBadge}
         </label>
         <input
-          type="text"
-          inputMode="numeric"
+          type="date"
           required
           value={form.checkOut}
           onChange={set("checkOut")}
-          placeholder="2026/08/02"
           className={inputClass}
         />
       </div>
-
-      {dateError && (
-        <p className="text-sm text-red-600">{dateError}</p>
-      )}
 
       <div>
         <label className={labelClass}>
