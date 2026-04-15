@@ -55,7 +55,7 @@ export default function ReservationForm() {
   };
 
   const inputClass =
-    "w-full max-w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1b4332] focus:border-transparent appearance-none";
+    "w-full max-w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1b4332] focus:border-transparent bg-white";
   const labelClass = "block text-sm font-medium text-neutral-700 mb-1";
   const requiredBadge = (
     <span className="ml-1 text-xs text-[#1b4332] font-semibold">
