@@ -6,7 +6,7 @@ export default function HistoryConceptSection() {
 
   return (
     <section id="history" className="py-14 md:py-24 bg-neutral-50">
-      <div className="container-w grid md:grid-cols-2 gap-10 md:items-stretch">
+      <div className="container-w grid gap-10">
         <div className="card shadow-soft flex flex-col md:h-full">
           <h3 className="serif text-xl md:text-2xl font-semibold mb-3">
             {tH("title")}
