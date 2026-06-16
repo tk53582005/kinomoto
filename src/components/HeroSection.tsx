@@ -26,8 +26,8 @@ export default function HeroSection() {
             <Image
               src="/img/logo-white.png"
               alt="酒茶いくひ"
-              width={120}
-              height={160}
+              width={180}
+              height={240}
               className="opacity-90"
             />
           </div>
