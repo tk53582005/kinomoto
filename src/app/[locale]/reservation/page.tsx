@@ -2,120 +2,43 @@ import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import RoomCard from "@/components/RoomCard";
-import type { GalleryImage } from "@/components/ImageSlider";
+import ReservationForm from "@/components/ReservationForm";
 
 export const metadata: Metadata = {
-  title: "客室のご案内 | 中屋旅館",
-  description:
-    "中屋旅館の3つの客室をご紹介します。歴史ある建物の面影を残しながら、現代の快適さを備えた空間です。",
+  title: "ご予約 | 中屋旅館",
+  description: "中屋旅館の公式予約ページ。公式サイトからのご予約が最もお得です。",
 };
 
-const kuriImages: GalleryImage[] = [
-  { src: "/img/rooms/kuri-01.jpg", altJa: "栗の間 01", altEn: "Kuri 01", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/kuri-02.jpg", altJa: "栗の間 02", altEn: "Kuri 02", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/kuri-03.jpg", altJa: "栗の間 03", altEn: "Kuri 03", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/kuri-04.jpg", altJa: "栗の間 04", altEn: "Kuri 04", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/kuri-05.jpg", altJa: "栗の間 05", altEn: "Kuri 05", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/kuri-06.jpg", altJa: "栗の間 06", altEn: "Kuri 06", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/kuri-07.jpg", altJa: "栗の間 07", altEn: "Kuri 07", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/kuri-08.jpg", altJa: "栗の間 08", altEn: "Kuri 08", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/kuri-09.jpg", altJa: "栗の間 09", altEn: "Kuri 09", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/kuri-10.jpg", altJa: "栗の間 10", altEn: "Kuri 10", captionJa: "", captionEn: "" },
-];
-
-const hibaImages: GalleryImage[] = [
-  { src: "/img/rooms/hiba-01.jpg", altJa: "桧葉の間 01", altEn: "Hiba 01", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-02.jpg", altJa: "桧葉の間 02", altEn: "Hiba 02", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-03.jpg", altJa: "桧葉の間 03", altEn: "Hiba 03", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-04.jpg", altJa: "桧葉の間 04", altEn: "Hiba 04", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-05.jpg", altJa: "桧葉の間 05", altEn: "Hiba 05", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-06.jpg", altJa: "桧葉の間 06", altEn: "Hiba 06", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-07.jpg", altJa: "桧葉の間 07", altEn: "Hiba 07", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-08.jpg", altJa: "桧葉の間 08", altEn: "Hiba 08", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-09.jpg", altJa: "桧葉の間 09", altEn: "Hiba 09", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-10.jpg", altJa: "桧葉の間 10", altEn: "Hiba 10", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-11.jpg", altJa: "桧葉の間 11", altEn: "Hiba 11", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-12.jpg", altJa: "桧葉の間 12", altEn: "Hiba 12", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-13.jpg", altJa: "桧葉の間 13", altEn: "Hiba 13", captionJa: "", captionEn: "" },
-];
-
-const sugiImages: GalleryImage[] = [];
-
-const commonAmenities = [
-  "amenityWifi",
-  "amenityAc",
-  "amenityBath",
-  "amenityTowel",
-  "amenityHanger",
-  "amenityDryer",
-  "amenityAmenity",
-];
-
-const rooms = [
-  {
-    id: "room-01",
-    nameKey: "room01Name",
-    descKey: "room01Desc",
-    bedKey: "room01Bed",
-    priceKey: "room01Price",
-    capacity: 2,
-    images: kuriImages,
-    amenityKeys: commonAmenities,
-  },
-  {
-    id: "room-02",
-    nameKey: "room02Name",
-    descKey: "room02Desc",
-    bedKey: "room02Bed",
-    priceKey: "room02Price",
-    capacity: 6,
-    images: hibaImages,
-    amenityKeys: commonAmenities,
-  },
-  {
-    id: "room-03",
-    nameKey: "room03Name",
-    descKey: "room03Desc",
-    bedKey: "room03Bed",
-    priceKey: "room03Price",
-    capacity: 5,
-    images: sugiImages,
-    amenityKeys: [...commonAmenities, "amenityGarden"],
-  },
-];
-
-export default function RoomsPage() {
-  const t = useTranslations("rooms");
+export default function ReservationPage() {
+  const t = useTranslations("reservation");
 
   return (
     <>
       <Header />
       <main className="py-12 md:py-16 bg-neutral-50 min-h-screen">
-        <div className="container-w">
-          <p className="text-sm tracking-widest text-neutral-500">
-            {t("kicker")}
-          </p>
+        <div className="container-w max-w-2xl">
+          <p className="text-sm tracking-widest text-neutral-500">{t("kicker")}</p>
           <h1 className="serif text-3xl md:text-5xl font-semibold mt-2">
             {t("title")}
           </h1>
           <p className="mt-3 text-neutral-700">{t("lead")}</p>
+          <p className="mt-1 text-sm text-neutral-500">{t("checkInNote")}</p>
 
-          <div className="mt-6 flex flex-wrap gap-4 text-sm">
-            <div className="bg-white rounded-xl px-5 py-3 shadow-soft">
-              <span className="text-neutral-500">{t("checkIn")} </span>
-              <span className="font-semibold">{t("checkInTime")}</span>
-            </div>
-            <div className="bg-white rounded-xl px-5 py-3 shadow-soft">
-              <span className="text-neutral-500">{t("checkOut")} </span>
-              <span className="font-semibold">{t("checkOutTime")}</span>
+          <div className="mt-8 card shadow-soft">
+            <h2 className="font-semibold mb-1">{t("otaTitle")}</h2>
+            <p className="text-sm text-neutral-600 mb-4">{t("otaLead")}</p>
+            <div className="flex flex-wrap gap-3">
+              <a href="https://www.booking.com/Share-qtyJNOj" target="_blank" rel="noopener noreferrer" className="btn border border-neutral-300 text-sm hover:bg-neutral-50 flex items-center gap-2">
+                <span>🏨</span> {t("bookingCom")}
+              </a>
+              <a href="https://www.airbnb.jp/rooms/1637509784382653021" target="_blank" rel="noopener noreferrer" className="btn border border-neutral-300 text-sm hover:bg-neutral-50 flex items-center gap-2">
+                <span>🏠</span> {t("airbnb")}
+              </a>
             </div>
           </div>
 
-          <div className="mt-10 grid gap-8 md:gap-10">
-            {rooms.map((room) => (
-              <RoomCard key={room.id} room={room} />
-            ))}
+          <div className="mt-8">
+            <ReservationForm />
           </div>
         </div>
       </main>
