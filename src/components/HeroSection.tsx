@@ -21,6 +21,16 @@ export default function HeroSection() {
       </div>
       <div className="hero-overlay absolute inset-0 flex items-center md:items-end overflow-hidden">
         <div className="container-w pb-0 md:pb-16 text-white overflow-hidden max-w-full">
+          {/* ロゴ */}
+          <div className="mb-4 md:mb-6">
+            <Image
+              src="/img/logo-white.png"
+              alt="酒茶いくひ"
+              width={120}
+              height={160}
+              className="opacity-90"
+            />
+          </div>
           <p className="text-xs md:text-sm tracking-widest mb-2">{t("kicker")}</p>
           <h1 className="serif text-2xl md:text-5xl font-semibold leading-tight">
             {t("title")}
