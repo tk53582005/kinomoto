@@ -1,5 +1,14 @@
+"use client";
+
 import { useTranslations } from "next-intl";
-import ImageWithFallback from "./ImageWithFallback";
+import ImageSlider from "./ImageSlider";
+import type { GalleryImage } from "./ImageSlider";
+
+const barImages: GalleryImage[] = [
+  { src: "/img/bar-table.jpg", altJa: "一枚板カウンター", altEn: "Counter", captionJa: "", captionEn: "" },
+  { src: "/img/sake-bottles.jpg", altJa: "日本酒棚", altEn: "Sake bottles", captionJa: "", captionEn: "" },
+  { src: "/img/bar-pairing.jpg", altJa: "日本酒と器", altEn: "Sake and vessels", captionJa: "", captionEn: "" },
+];
 
 export default function BarSection() {
   const t = useTranslations("bar");
@@ -23,30 +32,8 @@ export default function BarSection() {
             </div>
           </div>
         </div>
-        <div className="order-2 md:order-2 grid gap-3 min-w-0">
-          <div className="relative w-full h-72 rounded-2xl shadow-soft overflow-hidden">
-            <ImageWithFallback
-              src="/img/bar-table.jpg"
-              alt="一枚板カウンター"
-              fallbackText="カウンター席"
-            />
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            <div className="relative h-48 w-full rounded-2xl shadow-soft overflow-hidden">
-              <ImageWithFallback
-                src="/img/sake-bottles.jpg"
-                alt="日本酒棚"
-                fallbackText="日本酒コレクション"
-              />
-            </div>
-            <div className="relative h-48 w-full rounded-2xl shadow-soft overflow-hidden">
-              <ImageWithFallback
-                src="/img/bar-pairing.jpg"
-                alt="日本酒と器"
-                fallbackText="お料理"
-              />
-            </div>
-          </div>
+        <div className="order-2 md:order-2 min-w-0">
+          <ImageSlider images={barImages} group="bar" aspectRatio="4/3" />
         </div>
       </div>
     </section>
