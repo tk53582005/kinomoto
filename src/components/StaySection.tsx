@@ -1,5 +1,14 @@
+"use client";
+
 import { useTranslations } from "next-intl";
-import ImageWithFallback from "./ImageWithFallback";
+import ImageSlider from "./ImageSlider";
+import type { GalleryImage } from "./ImageSlider";
+
+const stayImages: GalleryImage[] = [
+  { src: "/img/guest-room.jpeg", altJa: "客室", altEn: "Guest room", captionJa: "", captionEn: "" },
+  { src: "/img/lounge.jpeg", altJa: "ラウンジ", altEn: "Lounge", captionJa: "", captionEn: "" },
+  { src: "/img/garden.jpeg", altJa: "庭", altEn: "Garden", captionJa: "", captionEn: "" },
+];
 
 export default function StaySection() {
   const t = useTranslations("stay");
@@ -28,30 +37,8 @@ export default function StaySection() {
               </div>
             </div>
           </div>
-          <div className="grid gap-3">
-            <div className="relative w-full h-72 rounded-2xl shadow-soft overflow-hidden">
-              <ImageWithFallback
-                src="/img/guest-room.jpeg"
-                alt="客室"
-                fallbackText="客室"
-              />
-            </div>
-            <div className="grid grid-cols-2 gap-3">
-              <div className="relative h-48 w-full rounded-2xl shadow-soft overflow-hidden">
-                <ImageWithFallback
-                  src="/img/lounge.jpeg"
-                  alt="ラウンジ"
-                  fallbackText="ラウンジ"
-                />
-              </div>
-              <div className="relative h-48 w-full rounded-2xl shadow-soft overflow-hidden">
-                <ImageWithFallback
-                  src="/img/garden.jpeg"
-                  alt="庭"
-                  fallbackText="中庭"
-                />
-              </div>
-            </div>
+          <div>
+            <ImageSlider images={stayImages} group="stay" aspectRatio="4/3" />
           </div>
         </div>
       </div>
