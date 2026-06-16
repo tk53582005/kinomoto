@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocale } from "next-intl";
 import Image from "next/image";
 
@@ -24,6 +24,14 @@ export default function ImageSlider({ images, group, aspectRatio = "4/3" }: Prop
 
   const prev = () => setCurrent((i) => (i + images.length - 1) % images.length);
   const next = () => setCurrent((i) => (i + 1) % images.length);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrent((i) => (i + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [images.length]);
 
   if (images.length === 0) {
     return (
