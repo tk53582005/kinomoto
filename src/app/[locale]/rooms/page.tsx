@@ -20,8 +20,6 @@ const kuriImages: GalleryImage[] = [
   { src: "/img/rooms/kuri-06.jpg", altJa: "栗の間 06", altEn: "Kuri 06", captionJa: "", captionEn: "" },
   { src: "/img/rooms/kuri-07.jpg", altJa: "栗の間 07", altEn: "Kuri 07", captionJa: "", captionEn: "" },
   { src: "/img/rooms/kuri-08.jpg", altJa: "栗の間 08", altEn: "Kuri 08", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/kuri-09.jpg", altJa: "栗の間 09", altEn: "Kuri 09", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/kuri-10.jpg", altJa: "栗の間 10", altEn: "Kuri 10", captionJa: "", captionEn: "" },
 ];
 
 const hibaImages: GalleryImage[] = [
@@ -33,14 +31,18 @@ const hibaImages: GalleryImage[] = [
   { src: "/img/rooms/hiba-06.jpg", altJa: "桧葉の間 06", altEn: "Hiba 06", captionJa: "", captionEn: "" },
   { src: "/img/rooms/hiba-07.jpg", altJa: "桧葉の間 07", altEn: "Hiba 07", captionJa: "", captionEn: "" },
   { src: "/img/rooms/hiba-08.jpg", altJa: "桧葉の間 08", altEn: "Hiba 08", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-09.jpg", altJa: "桧葉の間 09", altEn: "Hiba 09", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-10.jpg", altJa: "桧葉の間 10", altEn: "Hiba 10", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-11.jpg", altJa: "桧葉の間 11", altEn: "Hiba 11", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-12.jpg", altJa: "桧葉の間 12", altEn: "Hiba 12", captionJa: "", captionEn: "" },
-  { src: "/img/rooms/hiba-13.jpg", altJa: "桧葉の間 13", altEn: "Hiba 13", captionJa: "", captionEn: "" },
 ];
 
-const sugiImages: GalleryImage[] = [];
+const sugiImages: GalleryImage[] = [
+  { src: "/img/rooms/sugi-01.jpg", altJa: "杉の間 01", altEn: "Sugi 01", captionJa: "", captionEn: "" },
+  { src: "/img/rooms/sugi-02.jpg", altJa: "杉の間 02", altEn: "Sugi 02", captionJa: "", captionEn: "" },
+  { src: "/img/rooms/sugi-03.jpg", altJa: "杉の間 03", altEn: "Sugi 03", captionJa: "", captionEn: "" },
+  { src: "/img/rooms/sugi-04.jpg", altJa: "杉の間 04", altEn: "Sugi 04", captionJa: "", captionEn: "" },
+  { src: "/img/rooms/sugi-05.jpg", altJa: "杉の間 05", altEn: "Sugi 05", captionJa: "", captionEn: "" },
+  { src: "/img/rooms/sugi-06.jpg", altJa: "杉の間 06", altEn: "Sugi 06", captionJa: "", captionEn: "" },
+  { src: "/img/rooms/sugi-07.jpg", altJa: "杉の間 07", altEn: "Sugi 07", captionJa: "", captionEn: "" },
+  { src: "/img/rooms/sugi-08.jpg", altJa: "杉の間 08", altEn: "Sugi 08", captionJa: "", captionEn: "" },
+];
 
 const commonAmenities = [
   "amenityWifi",
