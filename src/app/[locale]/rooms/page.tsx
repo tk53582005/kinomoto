@@ -81,7 +81,7 @@ const rooms = [
     priceKey: "room03Price",
     capacity: 5,
     images: sugiImages,
-    amenityKeys: [...commonAmenities, "amenityGarden"],
+    amenityKeys: commonAmenities,
   },
 ];
 
