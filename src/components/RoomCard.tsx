@@ -10,6 +10,7 @@ type Room = {
   nameKey: string;
   descKey: string;
   bedKey: string;
+  priceKey: string;
   capacity: number;
   images: GalleryImage[];
   amenityKeys: string[];
@@ -45,7 +46,7 @@ export default function RoomCard({ room }: Props) {
           <div className="text-right">
             <p className="text-xs text-neutral-500 mb-0.5">{t("priceFrom")}</p>
             <p className="serif text-xl font-semibold text-[#1b4332]">
-              {t("priceTbd")}
+              {t(room.priceKey as Parameters<typeof t>[0])}
             </p>
             <p className="text-xs text-neutral-400">{t("perNight")}</p>
           </div>

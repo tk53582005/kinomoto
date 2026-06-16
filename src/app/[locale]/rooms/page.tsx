@@ -42,52 +42,46 @@ const hibaImages: GalleryImage[] = [
 
 const sugiImages: GalleryImage[] = [];
 
+const commonAmenities = [
+  "amenityWifi",
+  "amenityAc",
+  "amenityBath",
+  "amenityTowel",
+  "amenityHanger",
+  "amenityDryer",
+  "amenityAmenity",
+];
+
 const rooms = [
   {
     id: "room-01",
     nameKey: "room01Name",
     descKey: "room01Desc",
     bedKey: "room01Bed",
+    priceKey: "room01Price",
     capacity: 2,
     images: kuriImages,
-    amenityKeys: [
-      "amenityWifi",
-      "amenityAc",
-      "amenityTv",
-      "amenityFridge",
-      "amenityBath",
-    ],
+    amenityKeys: commonAmenities,
   },
   {
     id: "room-02",
     nameKey: "room02Name",
     descKey: "room02Desc",
     bedKey: "room02Bed",
+    priceKey: "room02Price",
     capacity: 6,
     images: hibaImages,
-    amenityKeys: [
-      "amenityWifi",
-      "amenityAc",
-      "amenityTv",
-      "amenityFridge",
-      "amenityBath",
-    ],
+    amenityKeys: commonAmenities,
   },
   {
     id: "room-03",
     nameKey: "room03Name",
     descKey: "room03Desc",
     bedKey: "room03Bed",
-    capacity: 4,
+    priceKey: "room03Price",
+    capacity: 5,
     images: sugiImages,
-    amenityKeys: [
-      "amenityWifi",
-      "amenityAc",
-      "amenityTv",
-      "amenityFridge",
-      "amenityBath",
-      "amenityGarden",
-    ],
+    amenityKeys: [...commonAmenities, "amenityGarden"],
   },
 ];
 
