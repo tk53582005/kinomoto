@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
@@ -38,7 +39,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
       <div className="container-w flex items-center justify-between py-3 gap-2 overflow-hidden">
         <Link href={`/${locale}`} className="flex items-center gap-2 md:gap-3 min-w-0 shrink">
-          <div className="w-8 h-8 md:w-9 md:h-9 rounded-xl bg-[#1b4332] shrink-0" />
+          <Image
+            src="/img/logo-nakaya-black.png"
+            alt="中屋"
+            width={36}
+            height={48}
+            className="shrink-0 object-contain"
+          />
           <div className="leading-tight min-w-0">
             <p className="font-semibold text-sm md:text-base truncate">酒茶いくひ / 中屋旅館</p>
             <p className="text-xs text-neutral-500 hidden md:block">Kinomoto Dining &amp; Stay</p>
