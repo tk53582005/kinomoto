@@ -36,23 +36,23 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
+    <header className="sticky top-0 z-50 bg-black/90 backdrop-blur border-b border-neutral-800">
       <div className="container-w flex items-center justify-between py-3 gap-2 overflow-hidden">
         <Link href={`/${locale}`} className="flex items-center gap-2 md:gap-3 min-w-0 shrink">
           <Image
-            src="/img/logo-nakaya-black.png"
+            src="/img/logo-nakaya-white.png"
             alt="中屋"
             width={36}
             height={48}
             className="shrink-0 object-contain"
           />
           <div className="leading-tight min-w-0">
-            <p className="font-semibold text-sm md:text-base truncate">酒茶いくひ / 中屋旅館</p>
-            <p className="text-xs text-neutral-500 hidden md:block">Kinomoto Dining &amp; Stay</p>
+            <p className="font-semibold text-sm md:text-base truncate text-white">酒茶いくひ / 中屋旅館</p>
+            <p className="text-xs text-neutral-400 hidden md:block">Kinomoto Dining &amp; Stay</p>
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 text-sm" aria-label="Primary">
+        <nav className="hidden md:flex items-center gap-6 text-sm text-white" aria-label="Primary">
           {navLinks.map((link, i) =>
             (link as { highlight?: boolean }).highlight ? (
               <Link key={i} href={link.href} className="btn btn-primary text-sm px-4 py-2">
@@ -62,7 +62,7 @@ export default function Header() {
               <Link
                 key={i}
                 href={link.href}
-                className={`nav-link${link.bold ? " font-semibold" : ""}`}
+                className={`nav-link text-white${link.bold ? " font-semibold" : ""}`}
               >
                 {link.label}
               </Link>
@@ -73,7 +73,7 @@ export default function Header() {
         <div className="flex items-center gap-2 shrink-0">
           <button
             id="lang-ja"
-            className="btn lang-btn text-sm border border-neutral-300"
+            className="btn lang-btn text-sm border border-neutral-600 text-white"
             aria-pressed={locale === "ja" ? "true" : "false"}
             onClick={() => switchLocale("ja")}
           >
@@ -81,14 +81,14 @@ export default function Header() {
           </button>
           <button
             id="lang-en"
-            className="btn lang-btn text-sm border border-neutral-300"
+            className="btn lang-btn text-sm border border-neutral-600 text-white"
             aria-pressed={locale === "en" ? "true" : "false"}
             onClick={() => switchLocale("en")}
           >
             EN
           </button>
           <button
-            className="md:hidden p-2 rounded-lg border border-neutral-300"
+            className="md:hidden p-2 rounded-lg border border-neutral-600 text-white"
             aria-label={menuOpen ? "Close Menu" : "Open Menu"}
             onClick={() => setMenuOpen(!menuOpen)}
           >
@@ -98,13 +98,13 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden border-t border-neutral-200 bg-white">
+        <div className="md:hidden border-t border-neutral-800 bg-black">
           <nav className="container-w py-3 grid gap-3 text-sm">
             {navLinks.map((link, i) => (
               <Link
                 key={i}
                 href={link.href}
-                className={`py-2${link.bold ? " font-semibold" : ""}${(link as { highlight?: boolean }).highlight ? " text-[#1b4332] font-semibold" : ""}`}
+                className={`py-2 text-white${link.bold ? " font-semibold" : ""}${(link as { highlight?: boolean }).highlight ? " text-[#2d6a4f] font-semibold" : ""}`}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
