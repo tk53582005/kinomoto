@@ -43,16 +43,16 @@ export default function CtaSection() {
   ];
 
   return (
-    <section id="contact" className="py-14 md:py-24 bg-neutral-50">
+    <section id="contact" className="py-14 md:py-24">
       <div className="container-w card shadow-soft">
         <div className="text-center">
-          <h3 className="serif text-xl md:text-2xl font-semibold mb-3">
+          <h3 className="serif text-xl md:text-2xl font-semibold mb-3 text-white">
             {t("title")}
           </h3>
-          <p className="text-neutral-700 mb-8 whitespace-pre-line">{t("body")}</p>
+          <p className="text-neutral-300 mb-8 whitespace-pre-line">{t("body")}</p>
           <div className="flex justify-center gap-5">
             {socials.map((s) => (
-              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow transition hover:scale-105 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-300">
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="flex h-14 w-14 items-center justify-center rounded-full bg-neutral-800 shadow transition hover:scale-105 hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-500">
                 {s.icon}
               </a>
             ))}

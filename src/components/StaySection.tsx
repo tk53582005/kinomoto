@@ -14,26 +14,26 @@ export default function StaySection() {
   const t = useTranslations("stay");
 
   return (
-    <section id="stay" className="py-14 md:py-24 bg-white">
+    <section id="stay" className="py-14 md:py-24">
       <div className="container-w">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="serif text-2xl md:text-4xl font-semibold mb-4">
+            <h2 className="serif text-2xl md:text-4xl font-semibold mb-4 text-white">
               {t("title")}
             </h2>
-            <p className="text-neutral-700 leading-relaxed">{t("body")}</p>
+            <p className="text-neutral-300 leading-relaxed">{t("body")}</p>
             <div className="mt-6 grid grid-cols-2 gap-3 text-sm">
               <div className="card shadow-soft">
-                <p className="font-semibold mb-1">{t("fac1")}</p>
-                <p className="text-neutral-600">{t("fac1Body")}</p>
+                <p className="font-semibold mb-1 text-white">{t("fac1")}</p>
+                <p className="text-neutral-400">{t("fac1Body")}</p>
               </div>
               <div className="card shadow-soft">
-                <p className="font-semibold mb-1">{t("fac2")}</p>
-                <p className="text-neutral-600">{t("fac2Body")}</p>
+                <p className="font-semibold mb-1 text-white">{t("fac2")}</p>
+                <p className="text-neutral-400">{t("fac2Body")}</p>
               </div>
               <div className="card shadow-soft">
-                <p className="font-semibold mb-1">{t("fac3")}</p>
-                <p className="text-neutral-600">{t("fac3Body")}</p>
+                <p className="font-semibold mb-1 text-white">{t("fac3")}</p>
+                <p className="text-neutral-400">{t("fac3Body")}</p>
               </div>
             </div>
           </div>
